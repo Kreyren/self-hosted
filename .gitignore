@@ -1,0 +1,4 @@
+/target
+
+# Exclude cargo lock file
+Cargo.lock

@@ -1,0 +1,59 @@
+# This is pseudocoding for abstract!
+
+Example for OpenShift
+```yaml
+clouds:
+  shiftstack:
+    auth:
+      auth_url: http://10.10.14.42:5000/v3
+      project_name: shiftstack
+      username: shiftstack_user
+      password: XXX
+      user_domain_name: Default
+      project_domain_name: Default
+  dev-env:
+    region_name: RegionOne
+    auth:
+      username: 'devuser'
+      password: XXX
+      project_name: 'devonly'
+      auth_url: 'https://10.10.14.22:5001/v2.0'
+```
+
+Example for gitpod: https://github.com/gitpod-io/self-hosted/blob/master/values.yaml
+
+--- TOML = Concluded inefficient ---
+
+[general]
+# Cluster name
+name = TEST_NAME
+hostname = TEST_HOSTNAME
+proxy = ...
+
+# FIXME: Auth providers? -> Gitpod needs at least one (github, gitlab, ..)
+
+[cluster-user]
+user_username = TEST_USERNAME
+user_password = TEST_PASSWORD
+
+auth_url = http://10.10.14.42:5000/v3 (?)
+
+region: RegionOne
+
+[cluster-admin]
+admin_username = TEST_ADMIN_USERNAME
+admin_password = TEST_ADMIN_PASSWORD
+
+auth_url = https://10.10.14.22:5001/v2.0 (?)
+
+region: RegionOne
+
+--- YAML ---
+
+general:
+  name: TEST_NAME
+  hostname: TEST_HOSTNAME
+  gitpod:
+    
+
+---
